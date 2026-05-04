@@ -1,10 +1,16 @@
 # CS50P – My Solutions
 
-This repository contains my solutions to Harvard's [CS50P].
+My solutions to Harvard's [CS50P – Introduction to Programming with Python](https://cs50.harvard.edu/python/).
 
-I'm working through the course week by week while employed full time, as part of a career transition into AI and software development.
+Working through the course week by week while employed full time, as part of a career transition into AI and software development.
 
-Each folder corresponds to a course week. Problems are solved independently before consulting any external resources.
+---
+
+## Projects
+
+| Project | Week | Topic | README |
+|---------|------|-------|--------|
+| [plates.py](./plates/plates.py) | 2 | Loops | [→ details](./plates/README.md) |
 
 ---
 
@@ -20,4 +26,4 @@ Each folder corresponds to a course week. Problems are solved independently befo
 
 ---
 
-*Sharing the journey, not just the code.*
+*Sharing the journey, not just the code — [@boccassini_ai](https://x.com/boccassini_ai)*
