@@ -1,6 +1,6 @@
 # CS50P – My Solutions
 
-My solutions to Harvard's [CS50P – Introduction to Programming with Python](https://cs50.harvard.edu/python/).
+My solutions to Harvard's [CS50P - Introduction to Programming with Python](https://cs50.harvard.edu/python/).
 
 Working through the course week by week while employed full time, as part of a career transition into AI and software development.
 
@@ -11,6 +11,7 @@ Working through the course week by week while employed full time, as part of a c
 | Project | Week | Topic | README |
 |---------|------|-------|--------|
 | [plates.py](./plates/plates.py) | 2 | Loops | [→ details](./plates/README.md) |
+| [call_outcome_tracker.py](./call-outcome-tracker/call_outcome_tracker.py) | 4 | Libraries, JSON | [→ details](./call-outcome-tracker/README.md) |
 
 ---
 
@@ -26,4 +27,4 @@ Working through the course week by week while employed full time, as part of a c
 
 ---
 
-*Sharing the journey, not just the code — [@boccassini_ai](https://x.com/boccassini_ai)*
+*Sharing the journey, not just the code - [@boccassini_ai](https://x.com/boccassini_ai)*
