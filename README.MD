@@ -15,7 +15,8 @@ Each folder corresponds to a course week. Problems are solved independently befo
 | 0 | Functions, Variables | ✅ Done |
 | 1 | Conditionals | ✅ Done |
 | 2 | Loops | ✅ Done |
-| 3 | Exceptions | 🔄 In progress |
+| 3 | Exceptions | ✅ Done |
+| 4 | Libraries | ✅ Done |
 
 ---
 
