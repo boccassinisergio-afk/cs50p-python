@@ -38,7 +38,7 @@ def initialize():
 
 # ---------------- ADD ----------------
 def add_value():
-    value_one = input("Id: ").strip()
+    value_one = auto_id()
     value_two = input("Categoria: ").lower().strip()
     value_three = input("Argomento: ").lower().strip()
     value_four = input("Livello: ").lower().strip()
@@ -67,31 +67,39 @@ def view_report():
         reader = csv.DictReader(file)
 
         print("\n--- Synapse -- REPORT ---")
-        for row in reader:
-            print(f"ID: {row["id"]} | "
-                  f"Categoria: {row["categoria"]} |"
-                  f"Argomento: {row["argomento"]} |"
-                  f"Livello: {row["livello"]} |"
-                  f"Stato: {row["stato"]} |"
-                  f"Note: {row["note"]}")
+        choice = input("Vuoi cercare una parola specifica? ( si, no): ").strip().lower()
+        if choice == "no":
+            for row in reader:
+                print_row(row)
+        elif choice == "si":
+            keyword = input("Inserisci la parola da cercare: ").strip().lower()
+            for row in reader:
+                if any(keyword in row[field].lower() for field in FIELDNAMES[1:]):
+                    print_row(row)
 
 #---------------- MODIFY ---------------
 def update_value():
-    target = input("Quale valore vuoi modificare? ").lower().strip()
+    target = input("Quale ID vuoi modificare? ").strip()
 
     updated_rows = []
+    found = False
 
     with open(FILE_NAME, "r") as file:
         reader = csv.DictReader(file)
 
         for row in reader:
             if row["id"] == target:
+                found = True 
                 target_int = input("Quale attributo vuoi modificare? ").lower().strip()
-                if target_int in FIELDNAMES:
+                if target_int in FIELDNAMES[1:]:
                     new_value = input("Nuovo valore: ").strip()
                     row[target_int] = new_value
 
             updated_rows.append(row)
+
+        if not found:
+            print("Synapse -- ID non trovato.")
+            return 
 
     with open(FILE_NAME, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=FIELDNAMES)
@@ -102,16 +110,23 @@ def update_value():
     
 #--------------- DELETE --------------
 def delete_value():
-    target = input("Quale valore vuoi eliminare? ").lower().strip()
+    target = input("Quale ID vuoi eliminare? ").strip()
 
     remaining_rows = []
+    found = False
 
     with open(FILE_NAME, "r") as file:
         reader = csv.DictReader(file)
 
         for row in reader:
-            if row["id"] != target:
+            if row["id"] == target:
+                found = True
+            else:
                 remaining_rows.append(row)
+
+        if not found:
+            print("Synapse -- ID non trovato.")
+            return 
 
     with open(FILE_NAME, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=FIELDNAMES)
@@ -119,6 +134,33 @@ def delete_value():
         writer.writerows(remaining_rows)
 
     print("Synapse -- Valore eliminato.")
+
+#---------------- AUTO ID --------------------
+def auto_id():
+    with open(FILE_NAME, "r") as file:
+        reader = csv.DictReader(file)
+        ids = []
+
+        for row in reader:
+            try:
+                ids.append(int(row["id"]))
+            except ValueError:
+                pass
+
+        if not ids:
+            return 1
+
+        return max(ids) + 1
+    
+def print_row(row):
+    print(
+        f"ID: {row['id']} | "
+        f"Categoria: {row['categoria']} | "
+        f"Argomento: {row['argomento']} | "
+        f"Livello: {row['livello']} | "
+        f"Stato: {row['stato']} | "
+        f"Note: {row['note']}"
+    )
     
 if __name__ == "__main__":
     main()

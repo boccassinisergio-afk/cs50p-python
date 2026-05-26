@@ -15,9 +15,12 @@ The idea: the tool grows with you. As your skills improve, so does Synapse.
 ## Features
 
 - Add learning entries with category, topic, level, and status
+- Auto-generated IDs (no manual input required)
 - View a full report of all tracked concepts
+- Search across all fields with a keyword
 - Update any field of an existing entry
 - Delete entries by ID
+- Error handling for missing IDs on update and delete
 - Data persists across sessions via a local CSV file
 
 ---
@@ -26,7 +29,7 @@ The idea: the tool grows with you. As your skills improve, so does Synapse.
 
 | Field       | Description                                   |
 |-------------|-----------------------------------------------|
-| `id`        | Unique identifier for the entry               |
+| `id`        | Auto-generated unique identifier              |
 | `categoria` | Area of study (e.g. python, machine learning) |
 | `argomento` | Specific topic (e.g. functions, regression)   |
 | `livello`   | Difficulty level (e.g. base, intermedio)      |
@@ -50,12 +53,14 @@ python synapse.py
 5) Exit
 ```
 
+When viewing the report, you can either show all entries or search by keyword, the search scans all fields simultaneously.
+
 ---
 
 ## Example Entry
 
 ```
-ID: 001 | Categoria: python | Argomento: funzioni | Livello: base | Stato: completato | Note: cs50p week2
+ID: 1 | Categoria: python | Argomento: funzioni | Livello: base | Stato: completato | Note: cs50p week2
 ```
 
 ---
@@ -76,16 +81,30 @@ The project lives in [`cs50p-python`](https://github.com/boccassinisergio-afk/cs
 
 ---
 
+## Changelog
+
+### v1.1
+- Auto-generated IDs via `auto_id()`, uses `max(existing_ids) + 1`, handles deletions correctly
+- Keyword search across all fields in report view
+- Error handling in `update_value()` and `delete_value()` for missing IDs
+- Extracted `print_row()` as a reusable function
+- General code stability improvements
+
+### v1.0
+- Initial release: add, view, update, delete entries
+
+---
+
 ## Roadmap
 
-- [ ] Auto-generated IDs
 - [ ] Filter report by category or status
 - [ ] Progress statistics
 - [ ] Export to Markdown or HTML
 - [ ] JSON backend
+- [ ] UUID-based IDs
 
 ---
 
 ## Author
 
-Built by Sergio Boccassini , transitioning into AI development, one project at a time.
+Built by Sergio, transitioning into AI development, one project at a time.
