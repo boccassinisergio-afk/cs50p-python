@@ -11,9 +11,9 @@ Working through the course week by week while employed full time, as part of a c
 | Project | Week | Topic | README |
 |---------|------|-------|--------|
 | [plates.py](./plates/plates.py) | 2 | Loops | [→ details](./plates/README.md) |
-| [call_outcome_tracker.py](./call-outcome-tracker/call_outcome_tracker.py) | 4 | Libraries, JSON | [→ details](./call-outcome-tracker/README.MD) |
-| [Synapse_v2_1.py](./Synapse/Synapse_v2_1.py) | 6 | File I/O, JSON | [→ details](./Synapse/README.MD) |
-| [pulsar.py](./Pulsar/pulsar.py) | 7 | Regular Expressions, File I/O | [→ details](./Pulsar/README.md) |
+| [call_outcome_tracker.py](https://github.com/boccassinisergio-afk/call-outcome-tracker/blob/main/call_outcome_tracker.py) | 4 | Libraries, JSON | [→ details](https://github.com/boccassinisergio-afk/call-outcome-tracker/blob/main/README.MD) |
+| [Synapse_v2_1.py](https://github.com/boccassinisergio-afk/Synapse/blob/main/Synapse_v2_1.py) | 6 | File I/O, JSON | [→ details](https://github.com/boccassinisergio-afk/Synapse/blob/main/README.MD) |
+| [pulsar.py](https://github.com/boccassinisergio-afk/Pulsar/blob/main/Pulsar.py) | 7 | Regular Expressions, File I/O | [→ details](https://github.com/boccassinisergio-afk/Pulsar/blob/main/README.md) |
 
 ---
 
