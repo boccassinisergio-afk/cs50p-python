@@ -140,7 +140,7 @@ link https://linkedin.com/post/123, maggio 2025
 ## Requirements
 
 - Python 3.10+
-- Standard library only (`re`, `os`, `json`, `csv`) — no installs needed
+- Standard library only (`re`, `os`, `json`, `csv`) - no installs needed
 
 ---
 
