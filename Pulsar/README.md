@@ -37,12 +37,12 @@ ho creato un tool chiamato Pulsar usando python e json,
 
 ## Features
 
-- **Auto-extraction via regex** — name, technologies, date, status, link, platform
-- **Two entry types** — software projects and published content (LinkedIn, X)
-- **Persistent JSON storage** — entries accumulate across sessions
-- **CSV export** — `projects.csv` (all entries) + `skills.csv` (technologies aggregated by count)
-- **Terminal report** — readable summary of all saved entries
-- **Error handling** — graceful messages for missing or corrupted files
+- **Auto-extraction via regex** - name, technologies, date, status, link, platform
+- **Two entry types** - software projects and published content (LinkedIn, X)
+- **Persistent JSON storage** - entries accumulate across sessions
+- **CSV export** - `projects.csv` (all entries) + `skills.csv` (technologies aggregated by count)
+- **Terminal report** - readable summary of all saved entries
+- **Error handling** - graceful messages for missing or corrupted files
 
 ---
 
