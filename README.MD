@@ -29,8 +29,8 @@ Working through the course week by week while employed full time, as part of a c
 | 5 | Unit Tests | ✅ Done |
 | 6 | File I/O | ✅ Done |
 | 7 | Regular Expressions | ✅ Done |
-| 8 | Object-Oriented Programming | 🔄 In progress |
-| 9 | Et Cetera | ⏳ Coming soon |
+| 8 | Object-Oriented Programming | ✅ Done |
+| 9 | Et Cetera | ✅ Done |
 
 ---
 
