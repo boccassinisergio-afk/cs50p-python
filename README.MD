@@ -34,4 +34,4 @@ Working through the course week by week while employed full time, as part of a c
 
 ---
 
-*Sharing the journey, not just the code - [@boccassini_ai](https://x.com/boccassini_ai)*.
+*Sharing the journey, not just the code - [@boccassini_ai](https://x.com/boccassini_ai)*
